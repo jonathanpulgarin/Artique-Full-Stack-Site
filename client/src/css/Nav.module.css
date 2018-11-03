@@ -1,0 +1,11 @@
+.nav-container {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 3px #0B24FB solid;
+}
+
+.logo  {
+    height: 40px;
+    margin-top: 12px;
+}

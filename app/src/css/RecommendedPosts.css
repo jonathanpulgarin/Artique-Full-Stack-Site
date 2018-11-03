@@ -1,0 +1,12 @@
+.recommended-posts-container {
+    display: inline-block;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.recommended-posts-container .dashboard-sub-header {
+    font-size: 28px;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}

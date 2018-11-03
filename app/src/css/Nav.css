@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+}
+
+.nav-container {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 2000;
+}
+
+.nav-container .nav-main {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+.nav-container .nav-logo {
+    display: inline-block;
+    height: 40px;
+    padding-top: 12px;
+}
+
+.nav-container .nav-bottom-color {
+    background-image: linear-gradient(to right, #4facfe 0%, #27DAFD 100%);
+    width: 100%;
+    height: 3px;
+}
+
+.nav-container  .nav-link-container {
+    float: right;
+    line-height: 60px;
+    margin-right: 20px;
+}
+
+.nav-container .nav-link-container .nav-link {
+    margin-left: 10px;
+    cursor: pointer;
+}
