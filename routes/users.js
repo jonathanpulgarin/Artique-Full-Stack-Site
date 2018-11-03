@@ -23,12 +23,12 @@ var password;
 
 //Initializes Firebase | ENTER YOUR API KEY CREDENTIALS
 var firebaseConfig = {
-  apiKey: "<API_KEY>",
-  authDomain: "<PROJECT_ID>.firebaseapp.com",
-  databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-  projectId: "<PROJECT_ID>",
-  storageBucket: "<BUCKET>.appspot.com",
-  messagingSenderId: "<SENDER_ID>",
+  apiKey: "AIzaSyCOGkydSBH8PisOah6Iuw1ou7utnShdrOs",
+  authDomain: "artique-87845.firebaseapp.com",
+  databaseURL: "https://artique-87845.firebaseio.com",
+  projectId: "artique-87845",
+  storageBucket: "artique-87845.appspot.com",
+  messagingSenderId: "658107825164",
 };
 firebase.initializeApp(firebaseConfig);
 
