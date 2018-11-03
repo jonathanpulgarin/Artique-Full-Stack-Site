@@ -7,7 +7,7 @@ const router = express.Router();
 //Imports Fire base Authorization and Database
 const firebase = require('firebase/app');
 require("firebase/auth");
-require("firebase/database");
+require("firebase/firestore");
 
 //Imports Body Parser in order to read items subbmitted in a html form
 const bodyParser = require('body-parser');
