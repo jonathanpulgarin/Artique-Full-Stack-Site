@@ -9,12 +9,14 @@ class SignIn extends Component {
         this.state = {
             email: "",
             password: "",
-            postReq: ""
+            signInSuccessful: {},
+            needToSignIn: ""
         };
 
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSignInStatus = this.handleSignInStatus.bind(this);
     }
 
     handleEmailChange(event) {
@@ -24,7 +26,13 @@ class SignIn extends Component {
         this.setState({password: event.target.value});
     }
 
+    handleSignInStatus(event){
+
+    }
+
     handleSubmit(event) {
+        const self = this;
+        var temp;
         fetch('http://localhost:3001/login', {
             method: 'POST',
             headers: {
@@ -36,9 +44,27 @@ class SignIn extends Component {
                 password: this.state.password,
             })
         })
-        //.then((res) => res.json())
-        //.then((username) => {console.log(username);});
+        .then(res => res.json())
+        .then((signInStatus) => temp = signInStatus);
         event.preventDefault();
+
+        setTimeout(() => {
+            if(temp[0].signInSuccessful) {
+                console.log("true");
+                this.props.callbackLogin(true);
+                this.props.history.push('/discover');
+            }
+            else {
+                this.props.callbackLogin(false)
+                console.log("false");
+            }
+        }, 2000);
+    }
+
+    componentDidMount() {
+        if(this.props.renderNeedToSignIn == true) {
+            this.setState({needToSignIn: "You need to login"})
+        }
     }
 
     render() {
@@ -52,6 +78,7 @@ class SignIn extends Component {
                 <button type="submit" value="Submit">Login</button>
                 <p>Don't have an account? <Link to="/sign-up">Sign Up</Link></p>
                 <p>{this.state.postReq}</p>
+                <p className="login-error">{this.state.needToSignIn}</p>
             </form>
         </div>
         );

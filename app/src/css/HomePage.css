@@ -1,0 +1,9 @@
+.home-container {
+    width: 100%;
+}
+
+.home-container .header {
+    width: 100%;
+    height: calc(100vh - 63px);
+    background-color: red;
+}

@@ -3,10 +3,6 @@ import './css/Post.css';
 
 
 class Post extends Component {
-    constructor(props) {
-        super(props);
-    }
-
 	render() {
 		return (
             <div className="post-container">
