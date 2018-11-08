@@ -6,4 +6,4 @@ Artique is an art critique and review site for artists all of kinds. This projec
 ### 'PORT=3001 npm start'
 
 By running the Node app on port 3001, our react front-end app will be able to run on port 3000 and be able to interact with this app.
-Open [http://localhost:30001](http://localhost:3001) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
